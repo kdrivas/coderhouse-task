@@ -31,7 +31,7 @@ class Contenedor {
       const objs = await this.getAll();
       obj['id'] = this.current_id;
       objs.push(obj)
-      await fs.promises.writeFile(this.name_file, JSON.stringify(objs));
+      await fs.promises.writeFile(this.name_file, JSON.stringify(objs, null, 2));
       return this.current_id;
     } catch (error) {
       console.log('Error:', error);
@@ -52,7 +52,7 @@ class Contenedor {
       const objs = await this.getAll();
       const newObjs = objs.filter(e => (e.id !== id));
 
-      await fs.promises.writeFile(this.name_file, JSON.stringify(newObjs));
+      await fs.promises.writeFile(this.name_file, JSON.stringify(newObjs, null, 2));
     } catch (error) {
       console.log('Error:', error);
     }

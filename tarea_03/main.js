@@ -15,7 +15,7 @@ app.get('/productos', async (req, res) => {
 
 app.get('/productosRandom', async (req, res) => {
   const data = await cont.getProducts();
-  const randIndex = Math.floor(Math.random() * (data.length - 1));
+  const randIndex = Math.floor(Math.random() * (data.length));
 
   res.send({'data': data[randIndex]});
 });
