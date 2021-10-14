@@ -2,15 +2,12 @@ const fs = require('fs');
 
 class Contenedor {
   constructor(name_file) {
-    this.current_id = 0;
     this.name_file = name_file;
 
     // Inicializacion del archivo
-    if (!fs.existsSync(this.name_file)) {
-      fs.promises.writeFile(this.name_file, '')
+    fs.promises.writeFile(this.name_file, '')
       .then(_ => console.log('File init'))
       .catch(error => console.log('Error:', error));
-    }
   }
 
   async getAll() {
@@ -29,12 +26,16 @@ class Contenedor {
 
   async save(obj) {
     try {
-      this.current_id++;
       const objs = await this.getAll();
-      obj['id'] = this.current_id;
+      if (!objs.length) {
+        obj['id'] = 1;
+      }
+      else {
+        obj['id'] = objs[objs.length - 1]['id'] + 1;
+      }
       objs.push(obj)
       await fs.promises.writeFile(this.name_file, JSON.stringify(objs, null, 2));
-      return this.current_id;
+      return obj['id'];
     } catch (error) {
       console.log('Error:', error);
     }
@@ -68,5 +69,3 @@ class Contenedor {
     }
   }
 }
-
-module.exports = Contenedor;
