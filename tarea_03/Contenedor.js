@@ -6,9 +6,11 @@ class Contenedor {
     this.name_file = name_file;
 
     // Inicializacion del archivo
-    fs.promises.writeFile(this.name_file, '')
+    if (!fs.existsSync(this.name_file)) {
+      fs.promises.writeFile(this.name_file, '')
       .then(_ => console.log('File init'))
       .catch(error => console.log('Error:', error));
+    }
   }
 
   async getAll() {
@@ -66,3 +68,5 @@ class Contenedor {
     }
   }
 }
+
+module.exports = Contenedor;
