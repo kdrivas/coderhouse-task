@@ -5,10 +5,21 @@
     <title>Subir Archivo</title>
 </head>
 <body>
-    <!--  SINGLE FILE -->
-    <form action="/api/productos/load" enctype="multipart/form-data" method="POST">
-        <input type="file" name="myFile" />
-        <input type="submit" value="Subir Archivo" />
-    </form>
+    <h2>Upload a product</h2>
+    <form action="/api/productos/" method="POST">
+      <div>
+        <label>Title</label>
+        <input type="title" name="title" />
+      </div>
+      <div>
+        <label>Price</label>
+        <input type="price" name="price" />
+      </div>
+      <div>
+        <label>Thumbnail</label>
+        <input type="thumbnail" name="thumbnail" />
+      </div>
+      <input type="submit" value="Subir producto" />
+  </form>
 </body>
 </html>

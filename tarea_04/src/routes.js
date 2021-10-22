@@ -1,10 +1,20 @@
-const { Router } = require('express');
+const Contenedor = require('./contenedor.js');
 const multer = require('multer');
 const fs = require('fs');
 const path = require('path');
+const { Router } = require('express');
 
 const PATH = '../uploads';
 const apiRouter = Router();
+
+const products = new Contenedor([
+  {
+    "title": "Escuadra",
+    "price": 123.23,
+    "thumbnail": "http1",
+    "id": 1
+  },
+]);
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -16,28 +26,6 @@ const storage = multer.diskStorage({
 })
 const upload = multer({storage});
 
-let products = [
-  {
-    "title": "Escuadra",
-    "price": 123.23,
-    "thumbnail": "http1",
-    "id": 1
-  },
-]
-
-const getLastIndex = () => {
-  // Function para obtener el ultimo index del arreglo de productos
-
-  let newId = null;
-  if (products.length > 0 ){
-    newId = products[products.length - 1].id + 1;
-  }
-  else {
-    newId = 1;
-  }
-  return newId;
-}
-
 apiRouter.post('/load', upload.single('myFile'), (req, res, next) => {
   const file = req.file;
   if (!file) {
@@ -47,55 +35,56 @@ apiRouter.post('/load', upload.single('myFile'), (req, res, next) => {
   // Cargando data en array de productos
   const data = JSON.parse(fs.readFileSync(path.join(PATH, file.originalname), 'utf-8'))
   for (e of data) {
-    e['id'] = getLastIndex();
-    products.push(e);
+    products.addProduct(e);
   }
   res.send(`File <b>${file.originalname}</b> load`);
 })
 
 apiRouter.get('/', (req, res) => {
-  res.status(200).json(products);
+  res.status(200).json(products.getAll());
 })
 
 apiRouter.get('/:id', (req, res, next) => {
-  const product = products.filter(e => e.id == req.params.id);
-  if (!product.length) {
+  const id = parseInt(req.params.id);
+  const product = products.getProductById(id);
+  if (!product) {
     return next('Product not found');
   }
   else {
-    res.status(200).json(product[0]);
+    res.status(200).json(product);
   }
 });
 
 apiRouter.post('/', (req, res, next) => {
-  const element = req.body;
-  if (element['title'] === undefined || element['price'] === undefined || element['thumbnail'] === undefined){
+  let newProduct = req.body;
+  if (newProduct['title'] === undefined || newProduct['price'] === undefined || newProduct['thumbnail'] === undefined){
     return next('Insufficient data');
   }
   else {
-    element['id'] = getLastIndex();
-    products.push(element);
-    res.status(200).json(element);
+    newProduct = products.addProduct(newProduct)
+    res.status(200).json(newProduct);
   }
 })
 
-apiRouter.put('/:id', (req, res) => {
+apiRouter.put('/:id', (req, res, send) => {
   const id = parseInt(req.params.id);
-  const element = req.body;
-  const oldItem = products[id - 1];
-  
-  products[id - 1] = {...products[id - 1], ...element};
-  res.status(200).json({'Message': `Updated item ${id}`, 'Old item': oldItem, 'New item': element})
-})
-
-apiRouter.delete('/:id', (req, res, next) => {
-  const index = products.findIndex(e => e.id == req.params.id);
-  if (index < 0) {
+  const newProduct = products.modifyProduct(id, req.body);
+  if (!newProduct) {
     return next('Product not found');
   }
   else {
-    products.splice(index, 1);
-    res.status(200).json({'Message': `Deleted item ${index}`});
+    res.status(200).json({'Message': `Updated item ${id}`, 'New item': newProduct})
+  }
+})
+
+apiRouter.delete('/:id', (req, res, next) => {
+  const id = parseInt(req.params.id);
+  const error = products.removeProduct(id);
+  if (!error) {
+    return next('Product not found');
+  }
+  else {
+    res.status(200).json({'Message': `Deleted item ${id}`});
   }
 })
 
