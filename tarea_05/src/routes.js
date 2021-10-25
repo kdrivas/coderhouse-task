@@ -1,11 +1,12 @@
 const { Router } = require('express')
+const Container = require('./container');
 const routerProduct = Router()
 
 const container = new Container()
 
-routerProduct.get('/', async (req, res) => {
-  const allProducts = await container.getAll()
-  res.json(allProducts)
+routerProduct.get('/', (req, res) => {
+  const allProducts = container.getAll()
+  res.render('products.hbs')
 })
 
 routerProduct.post('/', async (req, res, next) => {
@@ -15,7 +16,7 @@ routerProduct.post('/', async (req, res, next) => {
   }
   else {
     const product = await container.addProduct(title, thumbnail, price)
-    send.json({'message': `New product added with id ${product['id']}`, product})
+    send.status(200).json({'message': `New product added with id ${product['id']}`, product})
   }
 })
 
@@ -23,7 +24,7 @@ routerProduct.get('/:id', async (req, res, err) => {
   const id = parseInt(req.params.id)
   const product = await container.getProduct(id)
   if (product) {
-    res.json({'message': 'Product found', product })
+    res.status(200).json({'message': 'Product found', product })
   }
   else {
     err('Product not Found');
@@ -35,7 +36,7 @@ routerProduct.put('/:id', async (req, res, err) => {
   const { title, thumbnail, price } = req.params
   const newProduct = await container.modifyProduct(id, title, thumbnail, price)
   if (newProduct) {
-    res.json({'message': `Item modified with index ${newProduct['id']}`, newProduct})
+    res.status(200).json({'message': `Item modified with index ${newProduct['id']}`, newProduct})
   }
   else {
     err('Product not Found');
@@ -46,7 +47,7 @@ routerProduct.delete('/:id', async(req, res, err) => {
   const id = parseInt(req.params.id)
   const status = await container.removeProduct(id)
   if (status) {
-    res.json({'message': 'Product removed'})
+    res.status(200).json({'message': 'Product removed'})
   }
   else {
     err('Product not Found');
@@ -54,5 +55,7 @@ routerProduct.delete('/:id', async(req, res, err) => {
 })
 
 routerProduct.use((error, req, res, next) => {
-  res.send(500).json(error)
+  res.status(500).json(error)
 })
+
+module.exports = routerProduct

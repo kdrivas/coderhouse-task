@@ -12,7 +12,7 @@ class Container {
     }
   }
 
-  async getAll() {
+  getAll() {
     return this.products
   }
 
@@ -55,3 +55,5 @@ class Container {
     }
   }
 }
+
+module.exports = Container;
