@@ -12,7 +12,7 @@ class Container {
     }
   }
 
-  getAll() {
+  async getAll() {
     return this.products
   }
 
