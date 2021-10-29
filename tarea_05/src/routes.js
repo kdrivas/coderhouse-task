@@ -6,7 +6,11 @@ const container = new Container([])
 
 routerProduct.get('/', async (req, res) => {
   const products = await container.getAll()
-  res.render('products.hbs', { products })
+  res.render('listProducts.hbs', { products })
+})
+
+routerProduct.get('/addProduct', async (req, res) => {
+  res.render('formProduct.hbs')
 })
 
 routerProduct.post('/', async (req, res, next) => {
