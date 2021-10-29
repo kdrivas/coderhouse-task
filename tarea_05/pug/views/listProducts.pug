@@ -1,0 +1,18 @@
+html
+  head
+    title='Mi plantilla de medidor en Pug JS'
+  body
+    h1 Products 
+    table()
+      thead 
+        th Title 
+        th Price 
+        th Thumbnail
+      each p in products
+        tr 
+          td= p.title
+          td= p.price
+          td 
+            img(src=p.price)
+    a(href="/api/productos/addProduct")
+      button Add product

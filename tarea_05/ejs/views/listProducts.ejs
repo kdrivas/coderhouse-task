@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <%- include('./partials/head.ejs') %>
+  </head>
+
+  <body>
+    <h1>Products</h1>
+    <table class="table">
+      <thead>
+        <th scope="col">Title</th>
+        <th scope="col">Price</th>
+        <th scope="col">Thumbnail</th>
+      </thead>
+      <% for(let i=0; i<products.length; i++) { %>
+        <tr>
+          <td><%= products[i].title %></td>
+          <td><%= products[i].price %></td>
+          <td><img src=<%= products[i].thumbnail %> alt=<%= products[i].thumbnail %> style="width:40px;height:40px;"/></td>
+        </tr>
+      <% } %>
+    </table>
+    <a href="/api/productos/addProduct"><button>Add product</button></a>
+  </body>
+</html>
