@@ -2,15 +2,9 @@ import { Router } from 'express'
 
 const routerProduct = Router()
 
-routerProduct.get('/home', async (req, res) => {
-  const container = req.app.products
-  const products = container.getAll()
-  res.render('formProduct.hbs', { products })
-})
-
 routerProduct.get('/', async (req, res) => {
   const container = req.app.products
-  const products = container.getAll()
+  const products = await container.getRecords()
   res.status(200).json({ products })
 })
 
@@ -22,7 +16,7 @@ routerProduct.post('/', async (req, res, next) => {
       return next('Insufficient data')
     }
     else {
-      const product = container.addProduct(title, thumbnail, price)
+      const product = await container.insertRecord({ title, thumbnail, price })
       send.status(200).json({'message': `New product added with id ${product['id']}`, product})
     }
   }
@@ -35,7 +29,7 @@ routerProduct.get('/:id', async (req, res, err) => {
   try {
     const container = req.app.products
     const id = parseInt(req.params.id)
-    const product = container.getProduct(id)
+    const product = await container.selectById(id)
     if (product) {
       res.status(200).json({'message': 'Product found', product })
     }
@@ -53,7 +47,7 @@ routerProduct.put('/:id', async (req, res, err) => {
     const container = req.app.products
     const id = parseInt(req.params.id)
     const { title, thumbnail, price } = req.params
-    const newProduct = container.modifyProduct(id, title, thumbnail, price)
+    const newProduct = await container.updateRecord(id, { title, thumbnail, price })
     if (newProduct) {
       res.status(200).json({'message': `Item modified with index ${newProduct['id']}`, newProduct})
     }
@@ -66,11 +60,11 @@ routerProduct.put('/:id', async (req, res, err) => {
   }
 })
 
-routerProduct.delete('/:id', async(req, res, err) => {
+routerProduct.delete('/:id', async (req, res, err) => {
   try {
     const container = req.app.products
     const id = parseInt(req.params.id)
-    const status = container.removeProduct(id)
+    const status = await container.deleteRecord(id)
     if (status) {
       res.status(200).json({'message': 'Product removed'})
     }

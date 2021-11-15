@@ -32,7 +32,8 @@ class DB {
   }
 
   async selectById(id) {
-    return this.knex(this.table).select('*').where({ id })
+    const result = await this.knex(this.table).select('*').where({ id })
+    return result
   }
 
   async insertRecord(data) {
@@ -40,12 +41,14 @@ class DB {
     return result
   }
 
-  deleteRecord(id) {a
-    return this.knex(this.table).where({ id }).del()
+  async deleteRecord(id) {
+    const result = await this.knex(this.table).where({ id }).del()
+    return result
   }
 
-  updateRecord(id, data) {
-    return this.knex(this.table).where({ id }).update(data)
+  async updateRecord(id, data) {
+    const result = await this.knex(this.table).where({ id }).update(data)
+    return result
   }
 }
 
