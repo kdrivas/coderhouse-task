@@ -13,7 +13,7 @@ const mariaDbMigrate = 1
 
 const sqliteOptions = {
   client: 'sqlite3',
-  connection: { filename: './mydb.sqlite' }
+  connection: { filename: 'ecommerce/mydb.sqlite' }
 }
 
 export { mariaDbOptions, mariaDbMigrate, sqliteOptions}

@@ -2,34 +2,36 @@ import express  from 'express'
 import { Server as HttpServer } from 'http'
 import { Server as IOServer } from 'socket.io'
 import routerProduct from './routes/product.js'
-import { Product } from './containers/product.js'
+import DB from './containers/db.js'
 import { mariaDbOptions, sqliteOptions } from './constants.js'
 
 const app = express()
 const httpServer = new HttpServer(app)
 const io = new IOServer(httpServer)
-const messages = []
 
-const products = new Product(mariaDbOptions, 'product', 'mariadb')
+const products = new DB(mariaDbOptions, 'product', 'mariadb')
 app.set('products', products)
+
+const messages = new DB(sqliteOptions, 'message', 'sqlite')
+app.set('messages', messages)
 
 io.on('connection', async (socket) => { 
   console.log('Usuario conectado') 
 
-  socket.emit('products', {'asdasd': 'asdsad'})
+  const productList = await products.getRecords()
+  socket.emit('products', JSON.parse(JSON.stringify(productList)))
   socket.on('updateProducts', async (product) => {
-    console.log('init', product)
-    const { title, thumbnail, price } = product
-    await products.addProduct(title, thumbnail, price)
-    const result = await products.getAll()
-    console.log(result)
-    io.sockets.emit('products', result)
+    await products.insertRecord(product)
+    const result = await products.getRecords()
+    io.sockets.emit('products', JSON.parse(JSON.stringify(result)))
   })
 
-  socket.emit('messages', messages)
-  socket.on('updateMessages', message => {
-    messages.push(message)
-    io.sockets.emit('messages', messages)
+  const messageList = await messages.getRecords()
+  socket.emit('messages', JSON.parse(JSON.stringify(messageList)))
+  socket.on('updateMessages', async (message) => {
+    await messages.insertRecord(message)
+    const result = await messages.getRecords()
+    io.sockets.emit('messages', JSON.parse(JSON.stringify(result)))
   })
 })
 

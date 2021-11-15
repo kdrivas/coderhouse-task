@@ -31,7 +31,13 @@
         </div>
         <input type="submit" value="Subir producto" />
       </form>
-      <div id="products"></div>
+      <div>
+        <h1>Products</h1>
+        <table class="table" id="products">
+        </table>
+        <a href="/api/productos/addProduct"><button>Add product</button></a>        
+
+      </div>
       <br/>
       <hr/>
       <br/>
@@ -43,7 +49,7 @@
       
         </div>
         <input type="text" placeholder="Ingrese su texto" id="message"/>
-        <button>Enviar</button>
+        <button id="button-message">Enviar</button>
       </div>
     </div>
   </div>

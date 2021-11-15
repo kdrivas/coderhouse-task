@@ -4,7 +4,6 @@ class DB {
   constructor(options, table, dbType) {
     this.knex = knexLib(options)
     this.table = table
-
     if (dbType == 'mariadb'){
       this.knex.schema.createTableIfNotExists(table, table => {
         table.increments("id")
@@ -38,7 +37,6 @@ class DB {
 
   async insertRecord(data) {
     const result = await this.knex(this.table).insert(data)
-    console.log(result)
     return result
   }
 
