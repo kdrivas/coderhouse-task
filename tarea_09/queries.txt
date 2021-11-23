@@ -1,0 +1,63 @@
+use ecommerce
+
+db.mensajes.insertMany([
+  {user: 'a0@1.com', message: 'hola1', sent_at: '10/10/2021 06:00:00'},
+  {user: 'a2@a.com', message: 'hola2', sent_at: '10/10/2021 06:00:30'}, 
+  {user: 'a3@a.com', message:'hola3', sent_at:'10/09/2021 05:00:40'},
+  {user: 'a4@a.com', message:'hola4', sent_at:'10/09/2021 05:00:40'},
+  {user: 'a5@a.com', message:'hola5', sent_at:'10/09/2021 10:00:40'},
+  {user: 'a6@a.com', message:'hola6', sent_at:'01/09/2021 05:00:40'},
+  {user: 'a7@a.com', message:'hola7', sent_at:'15/09/2021 05:00:40'},
+  {user: 'a8@a.com', message:'hola8', sent_at:'10/09/2021 23:00:40'},
+  {user: 'a9@a.com', message:'hola9', sent_at:'18/09/2021 05:00:40'},
+  {user: 'a10@a.com',message:'hola10',sent_at:'20/09/2021 05:00:40'}
+])
+
+db.productos.insertMany([
+  {name:'tornillo', price:190, thumbnail:'http://1.com'},
+  {name:'tetera', price: 300, thumbnail:'http://2.com'},
+  {name:'sarten', price: 2500, thumbnail:'http://3.com'},
+  {name:'celular', price: 2000, thumbnail:'http://4.com'},
+  {name:'lapiz', price: 3400, thumbnail:'http://5.com'},
+  {name:'lapicero', price: 4990, thumbnail:'http://6.com'},
+  {name:'tenedor', price: 140, thumbnail:'http://7.com'},
+  {name:'hoja', price: 1300, thumbnail:'http://8.com'},
+  {name:'plato', price: 4000, thumbnail:'http://9.com'},
+  {name:'laptop', price: 4200, thumbnail:'http://10.com'},
+])
+
+3) --
+db.productos.find()
+db.mensajes.find()
+
+4) --
+db.productos.countDocuments()
+db.mensajes.countDocuments()
+
+5) --
+5.a) --
+db.productos.insertOne({name:'carton', price:460, thumbnail:'http://11.com'})
+
+5.b) --
+db.productos.find({price: {$lt: 1000}})
+db.productos.find({price: {$gt: 1000, $lt:3000}})
+db.productos.find({price: {$gt: 3000}})
+db.productos.find().sort({price: 1}).skip(2).limit(1)
+
+5.c) --
+db.productos.updateMany({}, {$set: {stock: 100}})
+
+5.d) --
+db.productos.updateMany({price: {$gt: 4000}}, {$set: {stock: 0}})
+
+5.e) --
+db.productos.deleteMany({price: {$lt: 1000}})
+
+6) --
+db.createUser({
+  user:'pepe',
+  pwd: 'asd456',
+  roles: [
+    { role: 'read', db: 'ecommerce'}
+  ]
+})
