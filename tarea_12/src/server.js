@@ -53,7 +53,10 @@ io.on('connection', async (socket) => {
 app.use(session({
   secret: 'hola',
   resave: false,
-  saveUninitialized: false
+  saveUninitialized: false,
+  cookie: {
+    maxAge: 60000,
+  }
 }))
 app.use('/', express.static('public'))
 app.use(express.urlencoded({ extended: true }))
