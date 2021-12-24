@@ -1,5 +1,12 @@
 const socket = io()
 
+fetch('/checkAuth').then(async (data) => {
+  let text = await data.json()
+  if (text['message'] == 'error') {
+    window.location.replace('/error_auth.html')
+  }
+})
+
 fetch('/getUser').then(async (data) => {
   const nombre = await data.text()
   const divPresentation = document.getElementById('presentation')

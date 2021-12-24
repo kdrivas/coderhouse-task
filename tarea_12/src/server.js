@@ -70,8 +70,20 @@ app.post('/login', (req, res) => {
   res.redirect('/messages.html')
 })
 
+app.get('/checkAuth', (req, res) => {
+  if (req.session?.nombre){
+    res.json({'message': 'ok'})
+  } else {
+    res.json({'message': 'error'})
+  }
+})
+
 app.get('/getUser', (req, res) => {
-  res.json(req.session.nombre)
+  if (req.session?.nombre){
+    res.json(req.session.nombre)
+  } else {
+    res.json('error')
+  }
 })
 
 app.post('/logout', (req, res) => {
