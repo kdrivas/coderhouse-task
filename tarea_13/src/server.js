@@ -124,11 +124,11 @@ app.get('/messages', checkAuth, (req, res) => {
   res.redirect('/messages.html')
 })
 
-app.post('/signup', passport.authenticate('signup', { failureRedirect: '/failaccess'}), (req, res) => {
+app.post('/signup', passport.authenticate('signup', { failureRedirect: '/error_login.html', successRedirect: '/messages'}), (req, res) => {
   res.status(200).json({'message': 'ok'})
 })
 
-app.post('/signin', passport.authenticate('signin', { failureRedirect: '/failaccess'}), (req, res) => {
+app.post('/signin', passport.authenticate('signin', { failureRedirect: '/error_auth.html', successRedirect: '/messages'}), (req, res) => {
   res.status(200).json({'message': 'ok'})
 })
 
