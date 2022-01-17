@@ -9,9 +9,7 @@ const calculo = () => {
   return d
 }
 
-process.on('exit', () => {
-  console.log(`worker #${process.pid} cerrado`)
-})
+
 
 // process.on('message', msg => {
 //   console.log(`worker #${process.pid} iniciando su tarea`)
@@ -30,3 +28,7 @@ process.on('mensaje', (msj) => {
 })
 
 process.send({ isReady: true })
+
+process.on('exit', () => {
+  console.log(`worker #${process.pid} cerrado`)
+})

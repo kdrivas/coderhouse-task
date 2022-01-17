@@ -11,10 +11,12 @@ import path from 'path'
 import { fork } from 'child_process'
 import DaoMessage from './dao/mensaje/index.js'
 import { User } from './models.js'
+import { fileURLToPath } from 'url';
 
 const app = express()
 const httpServer = HttpServer(app)
 const io = new IOServer(httpServer)
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const createHash = password => {
   return bCrypt.hashSync(password, bCrypt.genSaltSync(10), null)
@@ -116,10 +118,9 @@ app.get('/register', (req, res) => {
 
 app.get('/computo', (req, res) => {
   const forked = fork('src/computo.js')
+  forked.send('start')
   forked.on('mensaje', (msj) => {
-    if (msj.isReady) {
-      forked.send('start')
-    } else {
+    if (!msj.isReady) {
       res.send(msj.result)
     }
  })
