@@ -8,10 +8,10 @@ import session from 'express-session'
 import mongoose from 'mongoose'
 import { normalize, denormalize, schema } from "normalizr";
 import path from 'path'
-import { fork } from 'child_process'
 import DaoMessage from './dao/mensaje/index.js'
 import { User } from './models.js'
 import { fileURLToPath } from 'url';
+import randomRouter from './routers/fork.js';
 
 const app = express()
 const httpServer = HttpServer(app)
@@ -116,15 +116,7 @@ app.get('/register', (req, res) => {
   res.redirect('/register.html')
 })
 
-app.get('/computo', (req, res) => {
-  const forked = fork('src/computo.js')
-  forked.send('start')
-  forked.on('mensaje', (msj) => {
-    if (!msj.isReady) {
-      res.send(msj.result)
-    }
- })
-})
+app.use('/api', randomRouter)
 
 app.get('/checkAuth', (req, res) => {
   if (req.isAuthenticated()) {
