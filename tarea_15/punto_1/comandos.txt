@@ -1,0 +1,2 @@
+forever start src/server.js --modo FORK
+forever start src/server.js --modo CLUSTER --port 8085
