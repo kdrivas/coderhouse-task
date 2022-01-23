@@ -1,0 +1,7 @@
+pm2 start src/server.js --name server1 -- --modo FORK  --port 8082
+pm2 start src/server.js --name server2 -- --modo FORK  --port 8083
+pm2 start src/server.js --name server3 -- --modo FORK  --port 8084
+pm2 start src/server.js --name server4 -- --modo FORK  --port 8085
+pm2 list
+
+nginx -c /Users/macondo/Documents/coderhouse-task/tarea_15/punto_2/nginx.conf
