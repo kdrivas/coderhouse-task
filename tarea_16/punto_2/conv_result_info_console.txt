@@ -1,0 +1,746 @@
+Statistical profiling result from result_info_console.log, (5143 ticks, 10 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     51    1.0%          /usr/lib/system/libsystem_pthread.dylib
+     21    0.4%          /usr/lib/system/libsystem_platform.dylib
+      5    0.1%          /usr/lib/system/libsystem_malloc.dylib
+      3    0.1%          /usr/lib/system/libsystem_kernel.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      7    0.1%    0.1%  LazyCompile: *resolve node:path:1091:10
+      7    0.1%    0.1%  LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      6    0.1%    0.1%  LazyCompile: *nextTick node:internal/process/task_queues:104:18
+      6    0.1%    0.1%  LazyCompile: *next /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/index.js:176:16
+      5    0.1%    0.1%  LazyCompile: *normalizeString node:path:66:25
+      4    0.1%    0.1%  RegExp: ^[\^_`a-zA-Z\-0-9!#$%&'*+.|~]+$
+      3    0.1%    0.1%  LazyCompile: *writeOrBuffer node:internal/streams/writable:365:23
+      3    0.1%    0.1%  LazyCompile: *emit node:events:340:44
+      3    0.1%    0.1%  LazyCompile: *Hash node:internal/crypto/hash:58:14
+      3    0.1%    0.1%  Function: ^session /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:179:26
+      2    0.0%    0.0%  RegExp: \u001b\[\d\d?m
+      2    0.0%    0.0%  LazyCompile: *trim_prefix /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/index.js:288:23
+      2    0.0%    0.0%  LazyCompile: *realpathSync node:fs:2408:22
+      2    0.0%    0.0%  LazyCompile: *getEncodingOps node:buffer:678:24
+      2    0.0%    0.0%  LazyCompile: *formatProperty node:internal/util/inspect:1672:24
+      2    0.0%    0.0%  LazyCompile: *Module._nodeModulePaths node:internal/modules/cjs/loader:629:37
+      2    0.0%    0.0%  Function: ^write_ node:_http_outgoing:730:16
+      2    0.0%    0.0%  Function: ^writeOrBuffer node:internal/streams/writable:365:23
+      2    0.0%    0.0%  Function: ^trim_prefix /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/index.js:288:23
+      2    0.0%    0.0%  Function: ^stringifyReplacerFn /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/logform/node_modules/safe-stable-stringify/stable.js:386:30
+      2    0.0%    0.0%  Function: ^readPackage node:internal/modules/cjs/loader:290:21
+      2    0.0%    0.0%  Function: ^inspect node:internal/util/inspect:286:17
+      2    0.0%    0.0%  Function: ^header /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/response.js:759:29
+      2    0.0%    0.0%  Function: ^createError /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/http-errors/index.js:49:22
+      2    0.0%    0.0%  Function: ^<anonymous> file:///Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/src/server.js:188:27
+      1    0.0%    0.0%  RegExp: [^\t\x20-\x7e\x80-\xff]
+      1    0.0%    0.0%  RegExp: ;\s*charset\s*=
+      1    0.0%    0.0%  RegExp: ; *([!#$%&'*+.^_`|~0-9A-Za-z-]+) *= *("(?:[\u000b\u0020\u0021\u0023-\u005b\u005d-\u007e\u0080-\u00ff]|\\[\u000b\u0020-\u00ff])*"|[!#$%&'*+.^_`|~0-9A-Za-z-]+) *
+      1    0.0%    0.0%  RegExp: (?:^|\/)\.?\.$
+      1    0.0%    0.0%  LazyCompile: *validateString node:internal/validators:117:24
+      1    0.0%    0.0%  LazyCompile: *stringifyReplacerFn /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/logform/node_modules/safe-stable-stringify/stable.js:386:30
+      1    0.0%    0.0%  LazyCompile: *onwrite node:internal/streams/writable:425:17
+      1    0.0%    0.0%  LazyCompile: *header /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/response.js:759:29
+      1    0.0%    0.0%  LazyCompile: *fresh /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/parseurl/index.js:153:16
+      1    0.0%    0.0%  LazyCompile: *formatRaw node:internal/util/inspect:796:19
+      1    0.0%    0.0%  LazyCompile: *extname node:path:1385:10
+      1    0.0%    0.0%  LazyCompile: *dirname node:path:1275:10
+      1    0.0%    0.0%  Function: ^writeOrBuffer /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/readable-stream/lib/_stream_writable.js:363:23
+      1    0.0%    0.0%  Function: ^wrapmethods /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:394:25
+      1    0.0%    0.0%  Function: ^update node:internal/crypto/hash:95:40
+      1    0.0%    0.0%  Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      1    0.0%    0.0%  Function: ^toString node:buffer:782:46
+      1    0.0%    0.0%  Function: ^toNamespacedPath node:path:1266:19
+      1    0.0%    0.0%  Function: ^stylizeWithColor node:internal/util/inspect:521:26
+      1    0.0%    0.0%  Function: ^stringToFlags node:internal/fs/utils:555:23
+      1    0.0%    0.0%  Function: ^strEscape node:internal/util/inspect:465:19
+      1    0.0%    0.0%  Function: ^stat node:internal/modules/cjs/loader:151:14
+      1    0.0%    0.0%  Function: ^setWriteHeadHeaders /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/on-headers/index.js:105:30
+      1    0.0%    0.0%  Function: ^readableAddChunk /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/readable-stream/lib/_stream_readable.js:249:26
+      1    0.0%    0.0%  Function: ^readSync node:fs:684:18
+      1    0.0%    0.0%  Function: ^readPackageScope node:internal/modules/cjs/loader:321:26
+      1    0.0%    0.0%  Function: ^readFileSync node:fs:450:22
+      1    0.0%    0.0%  Function: ^parserOnIncoming node:_http_server:852:26
+      1    0.0%    0.0%  Function: ^originalurl /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/parseurl/index.js:65:22
+      1    0.0%    0.0%  Function: ^onwrite node:internal/streams/writable:425:17
+      1    0.0%    0.0%  Function: ^onwrite /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/readable-stream/lib/_stream_writable.js:444:17
+      1    0.0%    0.0%  Function: ^loggerMiddleware file:///Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/src/server.js:113:28
+      1    0.0%    0.0%  Function: ^log /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/winston/lib/winston/transports/console.js:44:6
+      1    0.0%    0.0%  Function: ^listenerCount node:events:722:23
+      1    0.0%    0.0%  Function: ^link node:internal/modules/esm/module_job:66:18
+      1    0.0%    0.0%  Function: ^isBelowBreakLength node:internal/util/inspect:1740:28
+      1    0.0%    0.0%  Function: ^initAsyncResource node:internal/timers:157:27
+      1    0.0%    0.0%  Function: ^hash /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:596:14
+      1    0.0%    0.0%  Function: ^hasTrailingSlash /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/send/index.js:303:67
+      1    0.0%    0.0%  Function: ^handle /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/layer.js:86:49
+      1    0.0%    0.0%  Function: ^handle /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/index.js:136:31
+      1    0.0%    0.0%  Function: ^get node:_http_incoming:108:16
+      1    0.0%    0.0%  Function: ^generateETag /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/utils.js:271:32
+      1    0.0%    0.0%  Function: ^formatWithOptionsInternal node:internal/util/inspect:1891:35
+      1    0.0%    0.0%  Function: ^formatRaw node:internal/util/inspect:796:19
+      1    0.0%    0.0%  Function: ^extname node:path:1385:10
+      1    0.0%    0.0%  Function: ^entitytag /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/etag/index.js:39:20
+      1    0.0%    0.0%  Function: ^emitStatistics node:internal/http:36:24
+      1    0.0%    0.0%  Function: ^emitReadable_ node:internal/streams/readable:574:23
+      1    0.0%    0.0%  Function: ^emitCloseNT node:internal/streams/destroy:126:21
+      1    0.0%    0.0%  Function: ^emit node:events:340:44
+      1    0.0%    0.0%  Function: ^dirname node:path:1275:10
+      1    0.0%    0.0%  Function: ^createHash node:crypto:129:20
+      1    0.0%    0.0%  Function: ^compileFunction node:vm:308:25
+      1    0.0%    0.0%  Function: ^clearBuffer node:internal/streams/writable:529:21
+      1    0.0%    0.0%  Function: ^captureLargerStackTrace node:internal/errors:458:35
+      1    0.0%    0.0%  Function: ^authenticate /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/passport/lib/middleware/authenticate.js:94:31
+      1    0.0%    0.0%  Function: ^afterWriteDispatched node:internal/stream_base_commons:159:30
+      1    0.0%    0.0%  Function: ^addChunk /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/readable-stream/lib/_stream_readable.js:295:18
+      1    0.0%    0.0%  Function: ^_unrefTimer node:net:417:52
+      1    0.0%    0.0%  Function: ^_storeHeader node:_http_outgoing:374:22
+      1    0.0%    0.0%  Function: ^Writable.write /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/readable-stream/lib/_stream_writable.js:288:37
+      1    0.0%    0.0%  Function: ^Socket._writeGeneric node:net:769:42
+      1    0.0%    0.0%  Function: ^Readable.read /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/readable-stream/lib/_stream_readable.js:392:36
+      1    0.0%    0.0%  Function: ^Readable node:internal/streams/readable:181:18
+      1    0.0%    0.0%  Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1    0.0%    0.0%  Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1    0.0%    0.0%  Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1    0.0%    0.0%  Function: ^IncomingMessage node:_http_incoming:51:25
+      1    0.0%    0.0%  Function: ^ImmediateList.append node:internal/timers:269:42
+      1    0.0%    0.0%  Function: ^DerivedLogger.<computed> /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/winston/lib/winston/create-logger.js:71:47
+      1    0.0%    0.0%  Function: ^Cookie /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/session/cookie.js:25:46
+      1    0.0%    0.0%  Function: ^<anonymous> node:internal/validators:100:40
+      1    0.0%    0.0%  Function: ^<anonymous> node:internal/fs/utils:636:3
+      1    0.0%    0.0%  Function: ^<anonymous> /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/socket.io/dist/index.js:262:27
+
+ [C++]:
+   ticks  total  nonlib   name
+   2427   47.2%   47.9%  t std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::push_back(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&&)
+    694   13.5%   13.7%  T node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+    679   13.2%   13.4%  t node::fs::Read(v8::FunctionCallbackInfo<v8::Value> const&)
+    164    3.2%    3.2%  T __kernelrpc_thread_policy_set
+    151    2.9%    3.0%  t node::fs::InternalModuleReadJSON(v8::FunctionCallbackInfo<v8::Value> const&)
+    142    2.8%    2.8%  T _vm_copy
+    131    2.5%    2.6%  T node::native_module::NativeModuleEnv::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     61    1.2%    1.2%  T _task_restartable_ranges_synchronize
+     39    0.8%    0.8%  t node::fs::Stat(v8::FunctionCallbackInfo<v8::Value> const&)
+     33    0.6%    0.7%  T node::loader::ModuleWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     32    0.6%    0.6%  T _read$NOCANCEL
+     26    0.5%    0.5%  t node::fs::InternalModuleStat(v8::FunctionCallbackInfo<v8::Value> const&)
+     23    0.4%    0.5%  t node::fs::Open(v8::FunctionCallbackInfo<v8::Value> const&)
+     14    0.3%    0.3%  t node::EnvGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+     14    0.3%    0.3%  T node::binding::GetInternalBinding(v8::FunctionCallbackInfo<v8::Value> const&)
+     11    0.2%    0.2%  t _tiny_malloc_should_clear
+     10    0.2%    0.2%  T ___ulock_wait
+      9    0.2%    0.2%  t void node::Buffer::(anonymous namespace)::StringWrite<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      9    0.2%    0.2%  t ___vfprintf
+      9    0.2%    0.2%  T ___sfp
+      8    0.2%    0.2%  t _small_malloc_should_clear
+      8    0.2%    0.2%  T node::fs::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      8    0.2%    0.2%  T __kernelrpc_mach_vm_purgable_control_trap
+      7    0.1%    0.1%  t std::__1::basic_istream<wchar_t, std::__1::char_traits<wchar_t> >& std::__1::__input_arithmetic<long long, wchar_t, std::__1::char_traits<wchar_t> >(std::__1::basic_istream<wchar_t, std::__1::char_traits<wchar_t> >&, long long&)
+      7    0.1%    0.1%  t node::fs::FStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      6    0.1%    0.1%  t _free_small
+      6    0.1%    0.1%  T _task_policy_set
+      6    0.1%    0.1%  T _mach_msg_server
+      6    0.1%    0.1%  T _kdebug_typefilter
+      6    0.1%    0.1%  T __platform_strncmp
+      6    0.1%    0.1%  T ___bsdthread_create
+      5    0.1%    0.1%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      5    0.1%    0.1%  t std::__1::basic_istream<wchar_t, std::__1::char_traits<wchar_t> >& std::__1::__input_arithmetic<unsigned long long, wchar_t, std::__1::char_traits<wchar_t> >(std::__1::basic_istream<wchar_t, std::__1::char_traits<wchar_t> >&, unsigned long long&)
+      5    0.1%    0.1%  t _nanov2_find_block_and_allocate
+      5    0.1%    0.1%  t _free_tiny
+      4    0.1%    0.1%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+      4    0.1%    0.1%  t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.1%    0.1%  t dyld3::Loader::mapAndFixupAllImages(Diagnostics&, bool, bool)
+      4    0.1%    0.1%  t _szone_realloc
+      3    0.1%    0.1%  t _tiny_free_no_lock
+      3    0.1%    0.1%  t _default_zone_realloc
+      3    0.1%    0.1%  t ___vfwscanf
+      3    0.1%    0.1%  T std::__1::basic_istream<wchar_t, std::__1::char_traits<wchar_t> >::get()
+      3    0.1%    0.1%  T node::fs::NewFSReqCallback(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.1%    0.1%  T _semaphore_create
+      3    0.1%    0.1%  T _fileno
+      2    0.0%    0.0%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)2>(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  t std::__1::messages_byname<char>::~messages_byname()
+      2    0.0%    0.0%  t std::__1::istreambuf_iterator<wchar_t, std::__1::char_traits<wchar_t> > std::__1::num_get<wchar_t, std::__1::istreambuf_iterator<wchar_t, std::__1::char_traits<wchar_t> > >::__do_get_unsigned<unsigned long long>(std::__1::istreambuf_iterator<wchar_t, std::__1::char_traits<wchar_t> >, std::__1::istreambuf_iterator<wchar_t, std::__1::char_traits<wchar_t> >, std::__1::ios_base&, unsigned int&, unsigned long long&) const
+      2    0.0%    0.0%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+      2    0.0%    0.0%  t node::Buffer::(anonymous namespace)::ByteLengthUtf8(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  t _tiny_try_realloc_in_place
+      2    0.0%    0.0%  t _tiny_malloc_from_free_list
+      2    0.0%    0.0%  t _small_malloc_from_free_list
+      2    0.0%    0.0%  t __platform_memmove$VARIANT$Haswell
+      2    0.0%    0.0%  T std::__1::collate_byname<char>::collate_byname(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned long)
+      2    0.0%    0.0%  T std::__1::__shared_weak_count::lock()
+      2    0.0%    0.0%  T node::loader::ModuleWrap::SetSyntheticExport(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  T node::binding::DLOpen(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  T node::InternalCallbackScope::Close()
+      2    0.0%    0.0%  T _task_self_trap
+      2    0.0%    0.0%  T _mach_msg_destroy
+      2    0.0%    0.0%  T _inet_net_pton
+      2    0.0%    0.0%  T _fopen
+      2    0.0%    0.0%  T ___thread_selfid
+      2    0.0%    0.0%  T ___sflags
+      1    0.0%    0.0%  t void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
+      1    0.0%    0.0%  t std::__1::locale::__imp::__imp(std::__1::locale::__imp const&, std::__1::locale::facet*, long)
+      1    0.0%    0.0%  t std::__1::istreambuf_iterator<wchar_t, std::__1::char_traits<wchar_t> > std::__1::num_get<wchar_t, std::__1::istreambuf_iterator<wchar_t, std::__1::char_traits<wchar_t> > >::__do_get_floating_point<float>(std::__1::istreambuf_iterator<wchar_t, std::__1::char_traits<wchar_t> >, std::__1::istreambuf_iterator<wchar_t, std::__1::char_traits<wchar_t> >, std::__1::ios_base&, unsigned int&, float&) const
+      1    0.0%    0.0%  t std::__1::istreambuf_iterator<wchar_t, std::__1::char_traits<wchar_t> > std::__1::num_get<wchar_t, std::__1::istreambuf_iterator<wchar_t, std::__1::char_traits<wchar_t> > >::__do_get_floating_point<double>(std::__1::istreambuf_iterator<wchar_t, std::__1::char_traits<wchar_t> >, std::__1::istreambuf_iterator<wchar_t, std::__1::char_traits<wchar_t> >, std::__1::ios_base&, unsigned int&, double&) const
+      1    0.0%    0.0%  t std::__1::__hash_table<unsigned int, std::__1::hash<unsigned int>, std::__1::equal_to<unsigned int>, std::__1::allocator<unsigned int> >::__rehash(unsigned long)
+      1    0.0%    0.0%  t std::__1::__hash_iterator<std::__1::__hash_node<node::CleanupHookCallback, void*>*> std::__1::__hash_table<node::CleanupHookCallback, node::CleanupHookCallback::Hash, node::CleanupHookCallback::Equal, std::__1::allocator<node::CleanupHookCallback> >::find<node::CleanupHookCallback>(node::CleanupHookCallback const&)
+      1    0.0%    0.0%  t non-virtual thunk to node::PerIsolatePlatformData::NonNestableDelayedTasksEnabled() const
+      1    0.0%    0.0%  t node::fs::OpenFileHandle(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::fs::FillGlobalStatsArray(node::fs::BindingData*, bool, uv_stat_t const*, bool)
+      1    0.0%    0.0%  t node::errors::SetSourceMapsEnabled(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::credentials::SafeGetenv(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::EnvQuery(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Integer> const&)
+      1    0.0%    0.0%  t node::(anonymous namespace)::Parser::Proxy<int (node::(anonymous namespace)::Parser::*)(), &(node::(anonymous namespace)::Parser::on_headers_complete())>::Raw(llhttp__internal_s*)
+      1    0.0%    0.0%  t node::(anonymous namespace)::Parser::Initialize(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t _tiny_free_list_remove_ptr
+      1    0.0%    0.0%  t _tiny_free_list_add_ptr
+      1    0.0%    0.0%  t _rack_region_insert
+      1    0.0%    0.0%  t _nanov2_allocate
+      1    0.0%    0.0%  t _moreglue
+      1    0.0%    0.0%  t _mach_error_string_int
+      1    0.0%    0.0%  t __cxxabiv1::__function_type_info::~__function_type_info()
+      1    0.0%    0.0%  t ___printf_render_quote
+      1    0.0%    0.0%  t ___find_warguments
+      1    0.0%    0.0%  T std::__1::locale::classic()
+      1    0.0%    0.0%  T std::__1::ios_base::init(void*)
+      1    0.0%    0.0%  T std::__1::basic_istream<wchar_t, std::__1::char_traits<wchar_t> >::peek()
+      1    0.0%    0.0%  T std::__1::basic_istream<wchar_t, std::__1::char_traits<wchar_t> >::get(wchar_t*, long)
+      1    0.0%    0.0%  T std::__1::__next_prime(unsigned long)
+      1    0.0%    0.0%  T node::loader::ModuleWrap::Link(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::i18n::ConverterObject::Decode(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::fs::FileHandle::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::cares_wrap::ChannelWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::InternalCallbackScope::~InternalCallbackScope()
+      1    0.0%    0.0%  T node::InternalCallbackScope::InternalCallbackScope(node::AsyncWrap*, int)
+      1    0.0%    0.0%  T node::HandleWrap::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::Environment::RunAndClearNativeImmediates(bool)
+      1    0.0%    0.0%  T _vfprintf_l
+      1    0.0%    0.0%  T _vdprintf_l
+      1    0.0%    0.0%  T _swscanf
+      1    0.0%    0.0%  T _realloc
+      1    0.0%    0.0%  T _pthread_setschedparam
+      1    0.0%    0.0%  T _open$NOCANCEL
+      1    0.0%    0.0%  T _malloc_zone_malloc
+      1    0.0%    0.0%  T _malloc_zone_from_ptr
+      1    0.0%    0.0%  T _malloc
+      1    0.0%    0.0%  T _link_ntoa
+      1    0.0%    0.0%  T _link_addr
+      1    0.0%    0.0%  T _guarded_open_np
+      1    0.0%    0.0%  T _getattrlistbulk
+      1    0.0%    0.0%  T _fgetws
+      1    0.0%    0.0%  T _dxprintf_exec
+      1    0.0%    0.0%  T ___collate_equiv_match
+
+ [Summary]:
+   ticks  total  nonlib   name
+    152    3.0%    3.0%  JavaScript
+   4901   95.3%   96.8%  C++
+    133    2.6%    2.6%  GC
+     80    1.6%          Shared libraries
+     10    0.2%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+   4501   98.4%   87.5%  t std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::push_back(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&&)
+     61    1.3%    1.2%  T _task_restartable_ranges_synchronize
+      6    0.1%    0.1%  T _mach_msg_server
+      1    0.0%    0.0%  t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::fs::FillGlobalStatsArray(node::fs::BindingData*, bool, uv_stat_t const*, bool)
+      1    0.0%    0.0%  t dyld3::Loader::mapAndFixupAllImages(Diagnostics&, bool, bool)
+      1    0.0%    0.0%  T node::loader::ModuleWrap::Link(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::loader::ModuleWrap::Evaluate(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T _open$NOCANCEL
+      1    0.0%    0.0%  T _kdebug_typefilter
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   2427   47.2%  t std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::push_back(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&&)
+   1372   56.5%    t std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::push_back(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&&)
+    304   22.2%      Function: ^writevGeneric node:internal/stream_base_commons:126:23
+    304  100.0%        Function: ^Socket._writeGeneric node:net:769:42
+    304  100.0%          Function: ^Socket._writev node:net:801:36
+    304  100.0%            Function: ^doWrite node:internal/streams/writable:398:17
+    124    9.0%      Function: ^handleWriteReq node:internal/stream_base_commons:45:24
+    124  100.0%        Function: ^writeGeneric node:internal/stream_base_commons:151:22
+    124  100.0%          Function: ^Socket._writeGeneric node:net:769:42
+    124  100.0%            Function: ^Socket._write node:net:806:35
+     69    5.0%      t std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::push_back(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&&)
+      6    8.7%        Function: ^readPackage node:internal/modules/cjs/loader:290:21
+      5   83.3%          Function: ^readPackageScope node:internal/modules/cjs/loader:321:26
+      4   80.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1   20.0%            Function: ^trySelf node:internal/modules/cjs/loader:441:17
+      1   16.7%          Function: ^resolveExports node:internal/modules/cjs/loader:472:24
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      5    7.2%        Function: ^header /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/response.js:759:29
+      4   80.0%          Function: ^send /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/response.js:107:25
+      4  100.0%            Function: ^json /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/response.js:239:25
+      1   20.0%          Function: ^json /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/response.js:239:25
+      1  100.0%            Function: ^<anonymous> file:///Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/src/server.js:188:27
+      3    4.3%        Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      3  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      3  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      3    4.3%        Function: ^FastBuffer node:internal/buffer:958:14
+      3  100.0%          Function: ^createUnsafeBuffer node:internal/buffer:1059:28
+      1   33.3%            LazyCompile: ~createPool node:buffer:150:20
+      1   33.3%            Function: ^createPool node:buffer:150:20
+      1   33.3%            Function: ^allocate node:buffer:397:18
+      2    2.9%        LazyCompile: ~parse node:url:168:37
+      2  100.0%          LazyCompile: ~urlParse node:url:152:18
+      2  100.0%            LazyCompile: ~validate_config /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:195:25
+      2    2.9%        LazyCompile: ~isIPv6 node:internal/net:35:16
+      2  100.0%          LazyCompile: ~isIP node:internal/net:39:14
+      1   50.0%            LazyCompile: ~lookupAndConnect node:net:995:26
+      1   50.0%            LazyCompile: ~lookup node:dns:97:16
+      2    2.9%        LazyCompile: *formatProperty node:internal/util/inspect:1672:24
+      2  100.0%          Function: ^formatArray node:internal/util/inspect:1497:21
+      2  100.0%            Function: ^formatRaw node:internal/util/inspect:796:19
+      2    2.9%        Function: ^stat node:internal/modules/cjs/loader:151:14
+      1   50.0%          Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      1  100.0%            Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+      1   50.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      2    2.9%        Function: ^removeColors node:internal/util:76:22
+      2  100.0%          Function: ^isBelowBreakLength node:internal/util/inspect:1740:28
+      2  100.0%            Function: ^reduceToSingleString node:internal/util/inspect:1764:30
+      2    2.9%        Function: ^readPackageScope node:internal/modules/cjs/loader:321:26
+      2  100.0%          Function: ^trySelf node:internal/modules/cjs/loader:441:17
+      2  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      2    2.9%        Function: ^pipe /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/send/index.js:510:43
+      2  100.0%          Function: ^serveStatic /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/serve-static/index.js:72:31
+      2  100.0%            Function: ^handle /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/layer.js:86:49
+      2    2.9%        Function: ^format /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/content-type/index.js:65:17
+      2  100.0%          Function: ^setCharset /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/utils.js:246:41
+      2  100.0%            Function: ^send /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/response.js:107:25
+      2    2.9%        Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      2  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      2  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      2    2.9%        Function: ^Module node:internal/modules/cjs/loader:172:16
+      2  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      2  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1    1.4%        LazyCompile: ~toUSVString node:internal/util:59:21
+      1  100.0%          LazyCompile: ~set search node:internal/url:900:13
+      1  100.0%            t std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::push_back(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&&)
+      1    1.4%        LazyCompile: ~setup /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/engine.io/node_modules/debug/src/common.js:7:15
+      1  100.0%          Function: ~<anonymous> /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/engine.io/node_modules/debug/src/node.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1    1.4%        LazyCompile: ~set pathname node:internal/url:884:15
+      1  100.0%          t std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::push_back(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&&)
+      1  100.0%            LazyCompile: ~pathToFileURL node:internal/url:1455:23
+      1    1.4%        LazyCompile: ~populateMaps /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/mime-types/index.js:154:23
+      1  100.0%          Function: ~<anonymous> /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/mime-types/index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1    1.4%        LazyCompile: ~parseOpts /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/@mapbox/node-pre-gyp/lib/node-pre-gyp.js:144:37
+      1  100.0%          LazyCompile: ~Run /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/@mapbox/node-pre-gyp/lib/node-pre-gyp.js:78:13
+      1  100.0%            LazyCompile: ~exports.find /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/@mapbox/node-pre-gyp/lib/pre-binding.js:17:24
+      1    1.4%        LazyCompile: ~deserializeObject /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%          LazyCompile: ~deserialize /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/bson/lib/parser/deserializer.js:36:21
+      1  100.0%            LazyCompile: ~deserialize /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/bson/lib/bson.js:162:21
+      1    1.4%        LazyCompile: ~deriveBFS /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/color/node_modules/color-convert/route.js:32:19
+      1  100.0%          LazyCompile: ~module.exports /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/color/node_modules/color-convert/route.js:78:27
+      1  100.0%            LazyCompile: ~<anonymous> /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/color/node_modules/color-convert/index.js:61:25
+      1    1.4%        LazyCompile: ~callSiteToString /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/depd/lib/compat/index.js:21:76
+      1  100.0%          LazyCompile: ~get /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/depd/lib/compat/index.js:54:16
+      1  100.0%            Function: ~<anonymous> /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/depd/index.js:1:1
+      1    1.4%        LazyCompile: ~argsert file:///Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/yargs/build/lib/argsert.js:4:24
+      1  100.0%          LazyCompile: ~addHelpOpt file:///Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/yargs/build/lib/yargs-factory.js:125:15
+      1  100.0%            LazyCompile: ~help file:///Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/yargs/build/lib/yargs-factory.js:139:9
+      1    1.4%        LazyCompile: ~<anonymous> file:///Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/yargs/build/lib/parse-command.js:13:26
+      1  100.0%          t std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::push_back(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&&)
+      1  100.0%            LazyCompile: ~parseCommand file:///Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/yargs/build/lib/parse-command.js:1:29
+      1    1.4%        LazyCompile: ~<anonymous> file:///Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/yargs/build/lib/argsert.js:36:33
+      1  100.0%          t std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::push_back(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&&)
+      1  100.0%            LazyCompile: ~argsert file:///Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/yargs/build/lib/argsert.js:4:24
+      1    1.4%        LazyCompile: ~<anonymous> /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:23:36
+      1  100.0%          t std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::push_back(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&&)
+      1  100.0%            Function: ~<anonymous> /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:1:1
+      1    1.4%        LazyCompile: *realpathSync node:fs:2408:22
+      1  100.0%          Function: ^toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%            Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      1    1.4%        Function: ~<anonymous> /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/webidl-conversions/lib/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    1.4%        Function: ~<anonymous> /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/stack-trace/lib/stack-trace.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    1.4%        Function: ~<anonymous> /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/socket.io/node_modules/debug/src/node.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    1.4%        Function: ~<anonymous> /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    1.4%        Function: ^toIdentifier /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/toidentifier/index.js:24:23
+      1  100.0%          Function: ^forEachCode /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/http-errors/index.js:265:38
+      1  100.0%            t std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::push_back(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&&)
+      1    1.4%        Function: ^strEscape node:internal/util/inspect:465:19
+      1  100.0%          LazyCompile: *formatProperty node:internal/util/inspect:1672:24
+      1  100.0%            LazyCompile: *formatRaw node:internal/util/inspect:796:19
+      1    1.4%        Function: ^strEscape /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/logform/node_modules/safe-stable-stringify/stable.js:36:20
+      1  100.0%          Function: ^stringifyReplacerFn /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/logform/node_modules/safe-stable-stringify/stable.js:386:30
+      1  100.0%            Function: ^stringifyReplacerFn /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/logform/node_modules/safe-stable-stringify/stable.js:386:30
+      1    1.4%        Function: ^set maxAge /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/session/cookie.js:83:13
+      1  100.0%          Function: ^Cookie /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/session/cookie.js:25:46
+      1  100.0%            Function: ^store.generate /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:158:28
+      1    1.4%        Function: ^pathtoRegexp /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/path-to-regexp/index.js:28:22
+      1  100.0%          Function: ^Layer /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/layer.js:33:15
+      1  100.0%            Function: ^Layer /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/layer.js:33:15
+      1    1.4%        Function: ^parse /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/content-type/index.js:106:16
+      1  100.0%          Function: ^setCharset /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/utils.js:246:41
+      1  100.0%            Function: ^send /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/response.js:107:25
+      1    1.4%        Function: ^onParserExecuteCommon node:_http_server:690:31
+      1  100.0%          Function: ^onParserExecute node:_http_server:633:25
+      1    1.4%        Function: ^normalize node:path:1127:12
+      1  100.0%          Function: ^pipe /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/send/index.js:510:43
+      1  100.0%            Function: ^serveStatic /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/serve-static/index.js:72:31
+      1    1.4%        Function: ^getOwn node:internal/bootstrap/loaders:180:16
+      1  100.0%          Function: ^syncExports node:internal/bootstrap/loaders:287:14
+      1  100.0%            Function: ^<anonymous> node:internal/bootstrap/loaders:273:15
+      1    1.4%        Function: ^formatProperty node:internal/util/inspect:1672:24
+      1  100.0%          Function: ^formatArray node:internal/util/inspect:1497:21
+      1  100.0%            Function: ^formatRaw node:internal/util/inspect:796:19
+      1    1.4%        Function: ^expressInit /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/middleware/init.js:29:30
+      1  100.0%          LazyCompile: *trim_prefix /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/index.js:288:23
+      1  100.0%            LazyCompile: *next /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/index.js:176:16
+      1    1.4%        Function: ^deriveBFS /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/color/node_modules/color-convert/route.js:32:19
+      1  100.0%          Function: ^module.exports /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/color/node_modules/color-convert/route.js:78:27
+      1  100.0%            LazyCompile: ~<anonymous> /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/color/node_modules/color-convert/index.js:61:25
+      1    1.4%        Function: ^createHash node:crypto:129:20
+      1  100.0%          Function: ^hash /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:596:14
+      1  100.0%            Function: ^isModified /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:425:24
+      1    1.4%        Function: ^checkInvalidHeaderChar node:_http_common:232:32
+      1  100.0%          Function: ^<anonymous> node:_http_outgoing:564:45
+      1  100.0%            Function: ^setHeader node:_http_outgoing:574:57
+      1    1.4%        Function: ^Writable.write /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/readable-stream/lib/_stream_writable.js:288:37
+      1  100.0%          Function: ^DerivedLogger.<computed> /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/winston/lib/winston/create-logger.js:71:47
+      1  100.0%            Function: ^loggerMiddleware file:///Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/src/server.js:113:28
+     41    3.0%      Function: ^authenticate /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/passport/lib/middleware/authenticate.js:94:31
+     31   75.6%        Function: ^handle /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/layer.js:86:49
+     31  100.0%          Function: ^trim_prefix /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/index.js:288:23
+     27   87.1%            LazyCompile: *next /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/index.js:176:16
+      4   12.9%            Function: ^<anonymous> /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/index.js:275:64
+     10   24.4%        LazyCompile: *trim_prefix /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/index.js:288:23
+     10  100.0%          LazyCompile: *next /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/index.js:176:16
+     10  100.0%            Function: ^initialize /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/passport/lib/middleware/initialize.js:51:29
+     40    2.9%      Function: ^Hash node:internal/crypto/hash:58:14
+     40  100.0%        Function: ^createHash node:crypto:129:20
+     20   50.0%          Function: ^hash /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:596:14
+     13   65.0%            Function: ^generate /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:363:22
+      7   35.0%            Function: ^isModified /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:425:24
+     19   47.5%          Function: ^entitytag /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/etag/index.js:39:20
+     19  100.0%            Function: ^etag /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/etag/index.js:70:15
+      1    2.5%          LazyCompile: ~hash /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:596:14
+      1  100.0%            LazyCompile: ~isModified /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:425:24
+     39    2.8%      Function: ^randomFillSync node:internal/crypto/random:110:24
+     39  100.0%        Function: ^randomBytes node:internal/crypto/random:90:21
+     39  100.0%          Function: ^randomBytesSync /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/random-bytes/index.js:72:25
+     39  100.0%            Function: ^uidSync /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/uid-safe/index.js:75:18
+     32    2.3%      Function: ^digest node:internal/crypto/hash:115:40
+     21   65.6%        Function: ^hash /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:596:14
+     11   52.4%          Function: ^generate /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:363:22
+     11  100.0%            Function: ^session /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:179:26
+     10   47.6%          Function: ^isModified /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:425:24
+      7   70.0%            Function: ^shouldSetCookie /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:464:29
+      3   30.0%            Function: ^shouldSave /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:440:24
+     11   34.4%        Function: ^entitytag /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/etag/index.js:39:20
+     11  100.0%          Function: ^etag /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/etag/index.js:70:15
+     11  100.0%            Function: ^generateETag /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/utils.js:271:32
+     31    2.3%      Function: ^session /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:179:26
+     27   87.1%        Function: ^handle /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/layer.js:86:49
+     27  100.0%          Function: ^trim_prefix /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/index.js:288:23
+     25   92.6%            LazyCompile: *next /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/index.js:176:16
+      2    7.4%            Function: ^<anonymous> /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/index.js:275:64
+      4   12.9%        LazyCompile: *trim_prefix /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/index.js:288:23
+      4  100.0%          LazyCompile: *next /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/index.js:176:16
+      4  100.0%            Function: ^loggerMiddleware file:///Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/src/server.js:113:28
+     28    2.0%      Function: ^hash /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:596:14
+     16   57.1%        Function: ^generate /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:363:22
+     16  100.0%          Function: ^session /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:179:26
+     10   62.5%            Function: ^handle /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/layer.js:86:49
+      6   37.5%            LazyCompile: *trim_prefix /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/index.js:288:23
+     12   42.9%        Function: ^isModified /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:425:24
+      8   66.7%          Function: ^shouldSave /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:440:24
+      8  100.0%            Function: ^end /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:250:27
+      4   33.3%          Function: ^shouldSetCookie /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:464:29
+      4  100.0%            Function: ^<anonymous> /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:220:28
+     26    1.9%      Function: ^<anonymous> file:///Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/src/server.js:188:27
+     26  100.0%        Function: ^handle /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/layer.js:86:49
+     26  100.0%          Function: ^next /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/route.js:114:16
+     26  100.0%            Function: ^dispatch /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/route.js:98:45
+     21    1.5%      LazyCompile: *next /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/index.js:176:16
+     14   66.7%        Function: ^strategy.pass /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/passport/lib/middleware/authenticate.js:345:31
+     14  100.0%          Function: ^SessionStrategy.authenticate /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/passport/lib/strategies/session.js:45:50
+     14  100.0%            Function: ^attempt /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/passport/lib/middleware/authenticate.js:180:22
+      3   14.3%        Function: ^error /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/serve-static/index.js:115:39
+      2   66.7%          Function: ^emit node:events:340:44
+      2  100.0%            Function: ^error /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/send/index.js:267:45
+      1   33.3%          LazyCompile: *emit node:events:340:44
+      1  100.0%            Function: ^error /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/send/index.js:267:45
+      2    9.5%        Function: ^session /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:179:26
+      2  100.0%          Function: ^handle /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/layer.js:86:49
+      2  100.0%            Function: ^trim_prefix /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/index.js:288:23
+      1    4.8%        Function: ^urlencodedParser /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/body-parser/lib/types/urlencoded.js:79:36
+      1  100.0%          Function: ^handle /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            Function: ^trim_prefix /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/index.js:288:23
+      1    4.8%        Function: ^initialize /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/passport/lib/middleware/initialize.js:51:29
+      1  100.0%          LazyCompile: *trim_prefix /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/index.js:288:23
+      1  100.0%            LazyCompile: *next /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/index.js:176:16
+     19    1.4%      Function: ^store.generate /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:158:28
+     19  100.0%        Function: ^generate /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:363:22
+     19  100.0%          Function: ^session /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:179:26
+     16   84.2%            Function: ^handle /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/layer.js:86:49
+      3   15.8%            LazyCompile: *trim_prefix /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/index.js:288:23
+     17    1.2%      Function: ^writeHead node:_http_server:269:19
+     17  100.0%        Function: ^writeHead /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/on-headers/index.js:28:29
+     17  100.0%          Function: ^_implicitHeader node:_http_server:264:68
+     16   94.1%            Function: ^write_ node:_http_outgoing:730:16
+      1    5.9%            LazyCompile: ~write_ node:_http_outgoing:730:16
+     16    1.2%      Function: ^send /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/response.js:107:25
+     16  100.0%        Function: ^json /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/response.js:239:25
+     16  100.0%          Function: ^<anonymous> file:///Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/src/server.js:188:27
+     16  100.0%            Function: ^handle /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/layer.js:86:49
+     15    1.1%      Function: ^stringify /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/response.js:1123:20
+     15  100.0%        Function: ^json /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/response.js:239:25
+     15  100.0%          Function: ^<anonymous> file:///Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/src/server.js:188:27
+     15  100.0%            Function: ^handle /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express/lib/router/layer.js:86:49
+     14    1.0%      LazyCompile: *Hash node:internal/crypto/hash:58:14
+     14  100.0%        Function: ^createHash node:crypto:129:20
+      9   64.3%          Function: ^hash /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:596:14
+      5   55.6%            Function: ^isModified /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:425:24
+      4   44.4%            Function: ^generate /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:363:22
+      5   35.7%          Function: ^entitytag /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/etag/index.js:39:20
+      5  100.0%            Function: ^etag /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/etag/index.js:70:15
+
+    694   13.5%  T node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+    694  100.0%    t std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::push_back(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&&)
+    687   99.0%      Function: ^compileFunction node:vm:308:25
+    680   99.0%        Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+    679   99.9%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+    657   96.8%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+     22    3.2%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      7    1.0%        LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1017:18
+      7  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+      7  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      7    1.0%      LazyCompile: ~compileFunction node:vm:308:25
+      7  100.0%        LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1017:18
+      7  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+      7  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+
+    679   13.2%  t node::fs::Read(v8::FunctionCallbackInfo<v8::Value> const&)
+    679  100.0%    t std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::push_back(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&&)
+    669   98.5%      Function: ^readSync node:fs:684:18
+    668   99.9%        Function: ^tryReadSync node:fs:429:21
+    667   99.9%          Function: ^readFileSync node:fs:450:22
+    614   92.1%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+     47    7.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+     10    1.5%      LazyCompile: ~readSync node:fs:684:18
+     10  100.0%        LazyCompile: ~tryReadSync node:fs:429:21
+     10  100.0%          LazyCompile: ~readFileSync node:fs:450:22
+     10  100.0%            LazyCompile: ~cjsPreparseModuleExports node:internal/modules/esm/translators:212:34
+
+    164    3.2%  T __kernelrpc_thread_policy_set
+
+    151    2.9%  t node::fs::InternalModuleReadJSON(v8::FunctionCallbackInfo<v8::Value> const&)
+    151  100.0%    t std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::push_back(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&&)
+    142   94.0%      Function: ^read node:internal/modules/package_json_reader:16:14
+    128   90.1%        Function: ^readPackage node:internal/modules/cjs/loader:290:21
+    109   85.2%          Function: ^resolveExports node:internal/modules/cjs/loader:472:24
+    109  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+     16   12.5%          LazyCompile: ~resolveExports node:internal/modules/cjs/loader:472:24
+     14   87.5%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      2   12.5%            LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      2    1.6%          Function: ^readPackageScope node:internal/modules/cjs/loader:321:26
+      2  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+     11    7.7%        Function: ^getPackageConfig node:internal/modules/esm/resolve:191:26
+      8   72.7%          Function: ^packageResolve node:internal/modules/esm/resolve:838:24
+      7   87.5%            Function: ^moduleResolve node:internal/modules/esm/resolve:917:23
+      1   12.5%            LazyCompile: ~moduleResolve node:internal/modules/esm/resolve:917:23
+      3   27.3%          Function: ^getPackageScopeConfig node:internal/modules/esm/resolve:247:31
+      2   66.7%            Function: ^getPackageType node:internal/modules/esm/resolve:785:24
+      1   33.3%            Function: ^packageResolve node:internal/modules/esm/resolve:838:24
+      3    2.1%        LazyCompile: ~readPackage node:internal/modules/cjs/loader:290:21
+      3  100.0%          LazyCompile: ~resolveExports node:internal/modules/cjs/loader:472:24
+      3  100.0%            LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      9    6.0%      LazyCompile: ~read node:internal/modules/package_json_reader:16:14
+      8   88.9%        LazyCompile: ~getPackageConfig node:internal/modules/esm/resolve:191:26
+      8  100.0%          LazyCompile: ~packageResolve node:internal/modules/esm/resolve:838:24
+      8  100.0%            LazyCompile: ~moduleResolve node:internal/modules/esm/resolve:917:23
+      1   11.1%        LazyCompile: ~readPackage node:internal/modules/cjs/loader:290:21
+      1  100.0%          LazyCompile: ~readPackageScope node:internal/modules/cjs/loader:321:26
+      1  100.0%            LazyCompile: ~shouldUseESMLoader node:internal/modules/run_main:26:28
+
+    142    2.8%  T _vm_copy
+    122   85.9%    t std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::push_back(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&&)
+      9    7.4%      t std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::push_back(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&&)
+      2   22.2%        LazyCompile: ~module.exports.get_napi_build_versions /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/@mapbox/node-pre-gyp/lib/util/napi.js:115:50
+      2  100.0%          LazyCompile: ~module.exports.expand_commands /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/@mapbox/node-pre-gyp/lib/util/napi.js:94:42
+      2  100.0%            LazyCompile: ~parseOpts /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/@mapbox/node-pre-gyp/lib/node-pre-gyp.js:144:37
+      1   11.1%        LazyCompile: ~parse node:url:168:37
+      1  100.0%          LazyCompile: ~urlParse node:url:152:18
+      1  100.0%            LazyCompile: ~validate_config /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:195:25
+      1   11.1%        LazyCompile: ~module.exports.get_napi_build_versions_raw /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/@mapbox/node-pre-gyp/lib/util/napi.js:140:54
+      1  100.0%          LazyCompile: ~module.exports.validate_package_json /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/@mapbox/node-pre-gyp/lib/util/napi.js:46:48
+      1  100.0%            LazyCompile: ~validate_config /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:195:25
+      1   11.1%        LazyCompile: ~connectHandler /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/mongodb/lib/cmap/connect.js:270:28
+      1  100.0%          LazyCompile: ~onceWrapper node:events:504:21
+      1  100.0%            Function: ^emit node:events:340:44
+      1   11.1%        LazyCompile: ~configure /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/winston/lib/winston/logger.js:81:12
+      1  100.0%          LazyCompile: ~Logger /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/winston/lib/winston/logger.js:40:14
+      1  100.0%            LazyCompile: ~DerivedLogger /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/winston/lib/winston/create-logger.js:43:16
+      1   11.1%        LazyCompile: ~config /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/dotenv/lib/main.js:59:17
+      1  100.0%          Script: ~<anonymous> file:///Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/src/config.js:1:1
+      1  100.0%            t std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::push_back(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&&)
+      1   11.1%        Function: ^processTicksAndRejections node:internal/process/task_queues:68:35
+      1   11.1%        Function: ^getOwn node:internal/bootstrap/loaders:180:16
+      1  100.0%          Function: ^syncExports node:internal/bootstrap/loaders:287:14
+      1  100.0%            Function: ^<anonymous> node:internal/bootstrap/loaders:273:15
+      4    3.3%      LazyCompile: ~validate_config /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:195:25
+      4  100.0%        LazyCompile: ~exports.find /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/@mapbox/node-pre-gyp/lib/pre-binding.js:17:24
+      4  100.0%          Function: ~<anonymous> /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/bcrypt/bcrypt.js:1:1
+      4  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      3    2.5%      LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:82:28
+      3  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:23:36
+      3  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      3    2.5%      LazyCompile: ~parse /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/semver/functions/parse.js:6:15
+      3  100.0%        LazyCompile: ~module.exports.evaluate /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:277:35
+      3  100.0%          LazyCompile: ~exports.find /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/@mapbox/node-pre-gyp/lib/pre-binding.js:17:24
+      3  100.0%            Function: ~<anonymous> /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/bcrypt/bcrypt.js:1:1
+      3    2.5%      LazyCompile: ~nextTick node:internal/process/task_queues:104:18
+      3  100.0%        LazyCompile: ~onwrite node:internal/streams/writable:425:17
+      3  100.0%          LazyCompile: ~afterWriteDispatched node:internal/stream_base_commons:159:30
+      3  100.0%            LazyCompile: ~writeGeneric node:internal/stream_base_commons:151:22
+      2    1.6%      LazyCompile: ~setStreamTimeout node:internal/stream_base_commons:254:26
+      2  100.0%        LazyCompile: ~makeConnection /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/mongodb/lib/cmap/connect.js:227:24
+      2  100.0%          LazyCompile: ~connect /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/mongodb/lib/cmap/connect.js:15:17
+      2  100.0%            LazyCompile: ~checkServer /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/mongodb/lib/sdam/monitor.js:138:21
+      2    1.6%      LazyCompile: ~onwrite node:internal/streams/writable:425:17
+      2  100.0%        LazyCompile: ~afterWriteDispatched node:internal/stream_base_commons:159:30
+      2  100.0%          LazyCompile: ~writeGeneric node:internal/stream_base_commons:151:22
+      2  100.0%            LazyCompile: ~Socket._writeGeneric node:net:769:42
+      2    1.6%      LazyCompile: ~get /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/kareem/index.js:473:13
+      2  100.0%        LazyCompile: ~Kareem.post /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/kareem/index.js:412:33
+      2  100.0%          LazyCompile: ~module.exports /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/mongoose/lib/plugins/clearValidating.js:7:26
+      2  100.0%            LazyCompile: ~Schema.plugin /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/mongoose/lib/schema.js:1504:35
+      2    1.6%      LazyCompile: ~depd /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/node_modules/depd/index.js:103:15
+      2  100.0%        Function: ~<anonymous> /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/express-session/index.js:1:1
+      2  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      2  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      2    1.6%      LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:41:35
+      2  100.0%        LazyCompile: ~getStderr node:internal/bootstrap/switches/is_main_thread:133:19
+      2  100.0%          Function: ~<anonymous> /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/debug/src/node.js:1:1
+      2  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+      2    1.6%      LazyCompile: ~Mongoose._model /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/mongoose/lib/index.js:525:37
+      2  100.0%        LazyCompile: ~Mongoose.model /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/mongoose/lib/index.js:461:36
+      2  100.0%          Script: ~<anonymous> file:///Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/src/models.js:1:1
+      2  100.0%            t std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::push_back(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&&)
+
+    131    2.5%  T node::native_module::NativeModuleEnv::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+    131  100.0%    t std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::push_back(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&&)
+    105   80.2%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+     87   82.9%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+     15   17.2%          Function: ~<anonymous> node:crypto:1:1
+     15  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      9   10.3%          Function: ~<anonymous> node:http:1:1
+      9  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      7    8.0%          Function: ~<anonymous> node:_http_agent:1:1
+      7  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      6    6.9%          Function: ~<anonymous> node:tls:1:1
+      6  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      5    5.7%          Function: ~<anonymous> node:internal/cluster/primary:1:1
+      5  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      5    5.7%          Function: ~<anonymous> node:_http_client:1:1
+      5  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      4    4.6%          LazyCompile: ~initCJSParse node:internal/modules/esm/translators:63:28
+      4  100.0%            LazyCompile: ~commonjsStrategy node:internal/modules/esm/translators:168:60
+      4    4.6%          Function: ~<anonymous> node:internal/child_process:1:1
+      4  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      4    4.6%          Function: ~<anonymous> node:child_process:1:1
+      4  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3    3.4%          LazyCompile: ~lazyRequire node:internal/crypto/util:67:21
+      3  100.0%            LazyCompile: ~get node:crypto:287:8
+      3    3.4%          Function: ~<anonymous> node:internal/crypto/hkdf:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    2.3%          LazyCompile: ~lazyLoadStreams node:fs:2841:25
+      2  100.0%            LazyCompile: ~get ReadStream node:fs:2984:17
+      2    2.3%          Function: ~<anonymous> node:internal/crypto/pbkdf2:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    2.3%          Function: ~<anonymous> node:https:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    2.3%          Function: ~<anonymous> node:assert:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    2.3%          Function: ~<anonymous> node:_http_common:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.1%          LazyCompile: ~get node:dns:334:8
+      1  100.0%            t std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::push_back(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&&)
+      1    1.1%          LazyCompile: ~get BlockList node:net:1779:16
+      1  100.0%            t std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::push_back(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&&)
+      1    1.1%          Function: ~<anonymous> node:tty:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.1%          Function: ~<anonymous> node:net:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.1%          Function: ~<anonymous> node:internal/crypto/util:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.1%          Function: ~<anonymous> node:internal/blocklist:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.1%          Function: ~<anonymous> node:dns:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.1%          Function: ~<anonymous> node:dgram:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.1%          Function: ~<anonymous> node:cluster:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.1%          Function: ~<anonymous> node:_tls_wrap:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.1%          Function: ~<anonymous> node:_tls_common:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.1%          Function: ~<anonymous> node:_http_server:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+     11   10.5%        Function: ^compileForPublicLoader node:internal/bootstrap/loaders:246:25
+     11  100.0%          Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+     11  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      7    6.7%        LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      6   85.7%          LazyCompile: ~loadNativeModule node:internal/modules/cjs/helpers:44:26
+      6  100.0%            LazyCompile: ~builtinStrategy node:internal/modules/esm/translators:270:58
+      1   14.3%          Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+     26   19.8%      LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+     26  100.0%        LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      5   19.2%          LazyCompile: ~initializeCJSLoader node:internal/bootstrap/pre_execution:422:29
+      5  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:23:36
+      4   15.4%          Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      4  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      4   15.4%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      3   11.5%          Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3   11.5%          Function: ~<anonymous> node:internal/modules/esm/get_source:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    3.8%          LazyCompile: ~setupInspectorHooks node:internal/bootstrap/pre_execution:233:29
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:23:36
+      1    3.8%          LazyCompile: ~initializeSourceMapsHandlers node:internal/bootstrap/pre_execution:461:38
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:23:36
+      1    3.8%          Function: ~<anonymous> node:internal/source_map/source_map_cache:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    3.8%          Function: ~<anonymous> node:internal/modules/esm/resolve:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    3.8%          Function: ~<anonymous> node:internal/modules/esm/module_map:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    3.8%          Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    3.8%          Function: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+
+     61    1.2%  T _task_restartable_ranges_synchronize
+     61  100.0%    LazyCompile: *writeOrBuffer node:internal/streams/writable:365:23
+     60   98.4%      LazyCompile: *_write node:internal/streams/writable:283:16
+     60  100.0%        Function: ^Writable.write node:internal/streams/writable:333:36
+     33   55.0%          Function: ^value node:internal/console/constructor:257:20
+     33  100.0%            Function: ^log node:internal/console/constructor:358:6
+     27   45.0%          Function: ^log /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/winston/lib/winston/transports/console.js:44:6
+     16   59.3%            Function: ^_write /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/winston-transport/index.js:69:51
+     11   40.7%            LazyCompile: *Writable.write /Users/macondo/Documents/coderhouse-task/tarea_16/punto_2/node_modules/readable-stream/lib/_stream_writable.js:288:37
+      1    1.6%      Function: ^_write node:internal/streams/writable:283:16
+      1  100.0%        Function: ^Writable.write node:internal/streams/writable:333:36
+      1  100.0%          Function: ^value node:internal/console/constructor:257:20
+      1  100.0%            Function: ^log node:internal/console/constructor:358:6
+
