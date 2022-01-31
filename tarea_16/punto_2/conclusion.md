@@ -25,3 +25,4 @@ node --prof-process result_info.log > conv_result_info.txt
 - Luego de ver las imagenes, se concluye que la funcion console.log añade un tiempo de 9ms al tiempo de ejecucion del endpoint
 - Por ultimo, el test realizado con autocannon muestra que la latencia de la ruta /infoConsole es mayor a la de /info
 <img src="autocannon_res.png">
+- Finalmente, el grafico de flamas se ubica en la carpeta 2998058.0x, e indica que 
