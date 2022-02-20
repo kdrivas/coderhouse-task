@@ -233,9 +233,9 @@ else {
     })
   })
 
-  const port = argv.port 
+  const port = argv.port || 8080
   const server = httpServer.listen(port, () => {
-    console.log(`listening at port ${port}`)
+    console.log(`listening at port ${port} with process ${process.pid}`)
   })
 
   await mongoose.connect(process.env.URI_MONGO, {

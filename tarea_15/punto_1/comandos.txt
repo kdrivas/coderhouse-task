@@ -1,2 +1,7 @@
-forever start src/server.js --modo FORK
-forever start src/server.js --modo CLUSTER --port 8085
+forever start src/server.js --modo FORK --port 8085
+forever start src/server.js --modo CLUSTER 
+forever list
+
+pm2 start src/server.js -- --modo FORK  --port 8085
+pm2 start src/server.js -- --modo CLUSTER  
+pm2 list
